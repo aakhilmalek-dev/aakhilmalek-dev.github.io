@@ -1047,7 +1047,7 @@ button {
   overflow: hidden;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 350px) {
   .project-section .tab-content .tab-item .description p {
     font-size: 14px;
   }
@@ -1061,7 +1061,7 @@ button {
   }
 
   section h2 {
-    font-size: 28px;
+    font-size: 24px !important;
   }
 
   .timeline p {
@@ -1086,6 +1086,11 @@ button {
     max-width: 250px;
     margin: 0 auto 20px auto;
     text-wrap: balance;
+  }
+
+  .header .hero {
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .testimonial .description {
@@ -1339,4 +1344,16 @@ button {
     max-width: calc(100% - 30px);
     display: block;
   }
+
+  .tech-grid {
+    margin-bottom: 40px;
+  }
+
+  .industries-section h2 {
+    max-width: 280px;
+    margin: 0 auto 30px auto;
+    font-size: 28px;
+  }
+
+  
 }
