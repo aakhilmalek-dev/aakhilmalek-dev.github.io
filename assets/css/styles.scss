@@ -1129,6 +1129,7 @@ button {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -1179,4 +1180,86 @@ button {
   .contact-card p {
     font-size: 16px;
   }
+}
+
+
+.tech-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.tech-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.tech-item img {
+  max-width: 100%;
+  max-height: 50px;
+  filter: grayscale(100%);
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+}
+
+.tech-details {
+  max-width: 500px;
+  text-align: left;
+}
+
+.tech-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.tech-details ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.tech-details ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  line-height: 1.6;
+}
+
+.tech-details ul li::before {
+  content: '\25A0';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #000;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ccc;
 }
