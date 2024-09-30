@@ -1138,4 +1138,10 @@ button {
 
 .cta-button:hover {
   background-color: #ccc;
+}
+
+@media (max-width: 767px) {
+  .tech-section {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
