@@ -696,6 +696,7 @@ form button[type="submit"]:hover {
   margin: 0 auto;
   position: relative;
   padding: 30px 0 10px 0;
+  max-width: 1000px;
 }
 
 .timeline::before {
@@ -773,8 +774,8 @@ form button[type="submit"]:hover {
   color: black;
   padding: 20px;
   width: 50%;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item:nth-child(even) {
@@ -1080,9 +1081,9 @@ button {
   }
 
   .header .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 7px;
-    max-width: 280px;
+    max-width: 250px;
     margin: 0 auto 20px auto;
     text-wrap: balance;
   }
@@ -1274,7 +1275,6 @@ button {
 
 .industries-section {
   text-align: center;
-  padding: 40px 20px;
 }
 
 .industries-section h2 {
