@@ -1,6 +1,6 @@
 $primary-color: #000;
 $secondary-color: #000;
-$light-color: #f8f9fa;
+$light-color: #f7f8fc;
 $dark-color: #343a40;
 
 @import url(../fonts/inter.css);
@@ -1269,4 +1269,74 @@ button {
   flex-direction: column;
   padding: 0;
 }
+}
+
+
+.industries-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.industries-section h2 {
+  // font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.industries-section p {
+  // font-size: 1rem;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.industries-grid {
+  display: grid;
+  justify-items: center;
+}
+
+.industry-item {
+  background-color: #f7f8fc;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.industry-item:hover {
+  transform: translateY(-5px);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+  gap: 20px;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .industries-grid {
+      grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-grid {
+    gap: 10px;
+      grid-template-columns: repeat(2, 1fr); /* 1 column for smaller screens */
+      width: 100%;
+  }
+
+  .industry-item {
+    background-color: #f7f8fc;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: calc(100% - 30px);
+    display: block;
+  }
 }
