@@ -165,10 +165,10 @@ section p {
   margin-bottom: 15px;
 }
 section:nth-child(odd) {
-  background-color: #f7f8fc;
+  background-color: #fff;
 }
 section:nth-child(even) {
-  background-color: #fff;
+  background-color: #f7f8fc;
 }
 section .container {
   position: relative;
@@ -1221,5 +1221,42 @@ button {
     max-width: 280px;
     margin: 0 auto 30px auto;
     font-size: 28px;
+  }
+}
+.tag-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tag-list .tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  padding: 6px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 99;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.tag-list .tag:hover {
+  background-color: #fafafa;
+}
+
+.tag-list .tag:active {
+  background-color: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .tag-list .tag {
+    padding: 3px 8px;
+    margin: 3px;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */
