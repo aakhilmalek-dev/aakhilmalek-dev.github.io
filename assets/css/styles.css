@@ -626,7 +626,7 @@ form button[type=submit]:hover {
   margin: 0 auto;
   position: relative;
   padding: 30px 0 10px 0;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .timeline::before {
@@ -705,6 +705,7 @@ form button[type=submit]:hover {
   padding: 20px;
   width: 50%;
   border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
 }
 
 .timeline-item:nth-child(even) .timeline-content {
