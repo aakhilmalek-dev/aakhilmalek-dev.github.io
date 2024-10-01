@@ -1267,7 +1267,8 @@ button {
 }
 
 .cta-button:hover {
-  background-color: #ccc;
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
 @media (max-width: 767px) { 
