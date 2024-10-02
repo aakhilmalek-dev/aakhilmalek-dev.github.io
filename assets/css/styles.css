@@ -1091,7 +1091,6 @@ button {
 .tech-item img {
   max-width: 100%;
   max-height: 50px;
-  filter: grayscale(100%);
 }
 
 .tech-item:hover {
@@ -1258,5 +1257,57 @@ button {
     padding: 3px 8px;
     margin: 3px;
     font-size: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .tech-details {
+    max-width: 400px;
+    text-align: left;
+  }
+}
+@media (max-width: 991px) {
+  .tech-section {
+    flex-direction: column;
+  }
+  .tech-details {
+    margin-top: 20px;
+  }
+  .industry-item {
+    max-width: 190px !important;
+    width: 100%;
+    margin: 0 10px;
+  }
+  .project-section .tabs ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .project-section .tabs ul li {
+    font-size: 12px;
+    padding: 6px 5px;
+    display: inline-flex;
+    max-width: calc(33.33% - 14px);
+    min-width: calc(33.33% - 14px);
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    margin-right: 4px;
+  }
+  .project-section .project-content {
+    flex-direction: column;
+  }
+  .project-section .tabs {
+    position: unset !important;
+  }
+  .project-section .tab-content {
+    margin-left: 0;
+  }
+  .project-section .tab-content .tab-item img {
+    width: auto;
+    height: auto !important;
+    max-height: unset;
+    min-height: unset;
   }
 }/*# sourceMappingURL=styles.css.map */
