@@ -82,6 +82,9 @@
       href="assets/image/banner.webp"
       type="image/webp"
     />
+
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   </head>
 
   <script type="application/ld+json">
@@ -292,7 +295,6 @@
           </div>
       </div>
   </section>
-  
     
 
       <section id="work" class="skills work">
@@ -456,28 +458,54 @@
 
       <section id="review" class="skills">
         <div class="container">
-          <div class="testimonial">
-            <div class="stars">
+          <div>
+            <h2>Testimonials</h2>
+            <p>What Clients Are Saying: Hear from Those Who’ve Experienced My Work</p>
+          </div>
+          <div class="owl-carousel">
+            <div class="testimonial">
               <div class="stars">
-                <span>
-                  <i><img src="assets/image/star-review.svg" alt="star" /></i>
-                  <i><img src="assets/image/star-review.svg" alt="star" /></i>
-                  <i><img src="assets/image/star-review.svg" alt="star" /></i>
-                  <i><img src="assets/image/star-review.svg" alt="star" /></i>
-                  <i><img src="assets/image/star-review.svg" alt="star" /></i>
-                </span>
+                  <span>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                  </span>
               </div>
+              <h3>Exceptional Website Design by Aakhil – Highly Recommend!</h3>
+              <p class="description">
+                Kudos to Aakhil for crafting an outstanding website! From idea to
+                reality, their creativity and precision delivered beyond
+                expectations. Seamless communication and a user-friendly
+                masterpiece. Highly recommend!
+              </p>
+              <p class="author">
+                <strong>Chandu Majeti - </strong>Beetrootdesignlab Agency
+              </p>
             </div>
-            <h3>Exceptional Website Design by Aakhil – Highly Recommend!</h3>
-            <p class="description">
-              Kudos to Aakhil for crafting an outstanding website! From idea to
-              reality, their creativity and precision delivered beyond
-              expectations. Seamless communication and a user-friendly
-              masterpiece. Highly recommend!
-            </p>
-            <p class="author">
-              <strong>Chandu Majeti - </strong>Beetrootdesignlab Agency
-            </p>
+
+            <div class="testimonial">
+                <div class="stars">
+                  <span>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                    <i><img src="assets/image/star-review.svg" alt="star" /></i>
+                  </span>
+              </div>
+              <h3>Exceptional Website Design by Aakhil – Highly Recommend!</h3>
+              <p class="description">
+                Kudos to Aakhil for crafting an outstanding website! From idea to
+                reality, their creativity and precision delivered beyond
+                expectations. Seamless communication and a user-friendly
+                masterpiece. Highly recommend!
+              </p>
+              <p class="author">
+                <strong>Chandu Majeti - </strong>Beetrootdesignlab Agency
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -545,7 +573,8 @@
         </div>
       </footer>
     </main>
-
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script>
       // scroll
 
@@ -635,6 +664,33 @@
       });
 
       // ned
+      $(document).ready(function(){
+
+      $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          smartSpeed:450,
+          autoplay: true,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:1,
+                  nav:true
+              },
+              600:{
+                  items:2,
+                  nav:false
+              },
+              1000:{
+                  items:3,
+                  nav:true,
+                  loop:true
+              }
+          }
+      })
+
+      });
+
     </script>
   </body>
 </html>

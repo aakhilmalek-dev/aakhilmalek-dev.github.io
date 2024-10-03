@@ -882,6 +882,13 @@ button {
 }
 
 .testimonial .stars span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial .stars span {
   color: #a2cf40;
   font-size: 24px;
 }
