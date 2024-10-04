@@ -13,6 +13,7 @@ h4,
 h5,
 h6 {
   margin: 0; /* reset margins for headers */
+  font-weight: 600;
 }
 
 p {
@@ -175,7 +176,7 @@ body {
 //
 
 section {
-  padding: 60px 15px;
+  padding: 60px 0;
   text-align: center;
   margin-bottom: 0;
 
@@ -208,6 +209,7 @@ section {
 }
 
 .about {
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -692,12 +694,14 @@ form button[type="submit"]:hover {
   animation-delay: 3s;
 }
 
+
+
 .timeline {
   width: 100%;
   margin: 0 auto;
   position: relative;
   padding: 30px 0 10px 0;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .timeline::before {
@@ -954,7 +958,7 @@ button {
   }
 
   section {
-    padding: 70px 15px 40px 15px;
+    padding: 70px 0 40px 0;
   }
 
   .skills .skill-list .skill {
@@ -1304,10 +1308,6 @@ button {
   margin-bottom: 30px;
 }
 
-.industries-grid {
-  display: grid;
-  justify-items: center;
-}
 
 .industry-item {
   background-color: #f7f8fc;
@@ -1316,35 +1316,22 @@ button {
   font-weight: 500;
   border-radius: 10px;
   width: 100%;
-  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  margin-bottom: 15px;
 }
 
 .industry-item:hover {
   transform: translateY(-5px);
 }
 
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-  gap: 20px;
-  justify-items: center;
-}
 
-@media (max-width: 1024px) {
-  .industries-grid {
-      grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
-  }
-}
 
 @media (max-width: 768px) {
-  .industries-grid {
-    gap: 10px;
-      grid-template-columns: repeat(2, 1fr); /* 1 column for smaller screens */
-      width: 100%;
-  }
 
   .industry-item {
     background-color: #f7f8fc;
@@ -1425,7 +1412,7 @@ button {
   .industry-item {
     max-width: 190px !important;
     width: 100%;
-    margin: 0 10px;
+    margin: 0 0px 10px 0px;
   }
 
   .project-section .tabs ul {
