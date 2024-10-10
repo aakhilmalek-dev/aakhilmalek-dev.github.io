@@ -767,7 +767,6 @@ form button[type=submit]:hover {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
   max-width: 100vw;
 }
 
