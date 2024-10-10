@@ -767,9 +767,15 @@ form button[type=submit]:hover {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
   max-width: 100vw;
 }
 
+@media (min-width: 769px) {
+  .menu-container {
+    width: calc(100% - 180px);
+  }
+}
 .nav-wrapper {
   overflow-x: hidden;
   white-space: nowrap;
@@ -784,7 +790,7 @@ form button[type=submit]:hover {
 }
 
 .nav-links li {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 button {
@@ -808,6 +814,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .menu-container {
+    width: calc(100% - 0px);
+  }
   .nav-left-btn,
   .nav-right-btn {
     display: block;
