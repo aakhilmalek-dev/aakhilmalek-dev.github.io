@@ -442,8 +442,7 @@ section {
 }
 
 form {
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
   padding: 40px 30px;
   border-radius: 8px;
   background-color: #fff;
@@ -1128,8 +1127,8 @@ button {
 .contact-card {
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // border-radius: 8px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
   margin: 0 auto;
@@ -1466,4 +1465,35 @@ button {
   
 }
 
+
+
+.contact-wrapper {
+  border-radius: 16px;
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.contact-image {
+  position: relative;
+  width: 100%;
+  border-radius: 16px 0 0 16px;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url('https://aakhilmalek.github.io/aakhil/assets/img/myprofile.jpg');
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05); /* semi-transparent overlay */
+}
 
