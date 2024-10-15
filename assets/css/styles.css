@@ -1267,6 +1267,7 @@ button {
   }
   .tech-details {
     margin-top: 20px;
+    padding: 20px;
   }
   .industry-item {
     max-width: 190px !important;
@@ -1357,5 +1358,68 @@ button {
   }
   .contact-wrapper {
     margin: 0 15px;
+  }
+}
+.experience-education-section {
+  /* Responsive */
+}
+.experience-education-section .timeline-new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+  text-align: left;
+}
+.experience-education-section .timeline-item-new {
+  width: calc(50% - 15px);
+  display: flex;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+.experience-education-section .icon {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+.experience-education-section .content {
+  margin-left: 20px;
+}
+.experience-education-section .content .date {
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  display: inline-block;
+}
+.experience-education-section .content h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  text-transform: capitalize;
+}
+.experience-education-section .content p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .experience-education-section .timeline-item-new {
+    width: calc(100% - 20px);
+  }
+  .experience-education-section .timeline-new {
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=styles.css.map */
