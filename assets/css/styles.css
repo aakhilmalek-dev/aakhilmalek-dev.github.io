@@ -1367,7 +1367,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 30px;
   text-align: left;
 }
 .experience-education-section .timeline-item-new {
