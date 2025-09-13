@@ -50,22 +50,22 @@ body {
   position: relative;
   color: white;
   padding: 70px 0 20px 0;
-  background-image: url("../image/banner.webp");
+  background-image: url("../image/banner-3.avif");
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: center center;
   background-size: cover;
   overflow: hidden;
 }
 .header::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
-  opacity: 0.5;
+  opacity: 1;
 }
 .header .navbar {
   display: flex;
@@ -92,7 +92,7 @@ body {
 .header .navbar .nav-links li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 .header .navbar .nav-links li a:hover {
   color: #000;
@@ -109,13 +109,15 @@ body {
 }
 .header .hero p {
   font-size: 24px;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
 }
 
 .header-top {
   padding: 8px 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   background-color: rgba(233, 239, 235, 0.25);
-  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   width: 100%;
   top: 0;
@@ -128,6 +130,8 @@ body {
 .header-scrolled {
   position: fixed;
   animation: slideDown 0.7s ease-in-out forwards;
+  background-color: rgba(233, 239, 235, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .header-scrolled .navbar .logo {
   color: #1f1f1f;
@@ -774,7 +778,8 @@ form button[type=submit]:hover {
 
 @media (min-width: 769px) {
   .menu-container {
-    width: calc(100% - 180px);
+    width: calc(100% - 120px);
+    justify-content: flex-end;
   }
 }
 .nav-wrapper {
@@ -1037,7 +1042,8 @@ button {
   margin-bottom: 20px;
 }
 
-.section-with-border::before, .section-with-border::after {
+.section-with-border::before,
+.section-with-border::after {
   content: "";
   flex: 1;
   height: 2px;
@@ -1221,31 +1227,33 @@ button {
 .tag-list {
   list-style-type: none;
   padding: 0;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  gap: 15px;
 }
 
 .tag-list .tag {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
   color: #000;
   padding: 6px 15px;
-  margin: 5px;
+  margin: 8px 5px;
   border-radius: 20px;
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
   z-index: 99;
   position: relative;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  min-width: 80px;
 }
 
 .tag-list .tag:hover {
-  background-color: #fafafa;
-}
-
-.tag-list .tag:active {
-  background-color: #fafafa;
+  background: rgb(255, 255, 255) !important;
 }
 
 @media (max-width: 768px) {
@@ -1253,6 +1261,7 @@ button {
     padding: 3px 8px;
     margin: 3px;
     font-size: 10px;
+    min-width: unset;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1421,5 +1430,19 @@ button {
   .experience-education-section .timeline-new {
     align-items: center;
     justify-content: center;
+  }
+}
+
+.hero-section {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 400px;
   }
 }/*# sourceMappingURL=styles.css.map */
