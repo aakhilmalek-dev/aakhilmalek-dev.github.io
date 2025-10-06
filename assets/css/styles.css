@@ -2322,3 +2322,396 @@ section {
     animation: none;
   }
 }
+/* Ultra AI Colors for Dark UI */
+:root {
+  --ai-cyan: #00f5ff;
+  --ai-electric: #00ffff;
+  --ai-neon-green: #39ff14;
+  --ai-plasma: #ff0080;
+  --ai-quantum: #8a2be2;
+  --ai-neural: #ff6b35;
+  --ai-matrix: #00ff41;
+  --ai-void: #0a0a0a;
+  --ai-chrome: #c0c0c0;
+  --ai-hologram: #ff00ff;
+}
+
+/* Resume Button with Ultra AI Styling */
+.resume-btn {
+  background: linear-gradient(
+    135deg,
+    var(--ai-cyan),
+    var(--ai-plasma)
+  ) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.4), 0 0 60px rgba(255, 0, 128, 0.2) !important;
+  border: 2px solid transparent !important;
+  background-clip: padding-box !important;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.resume-btn:hover::before {
+  left: 100%;
+}
+
+.resume-btn:hover {
+  background: linear-gradient(
+    135deg,
+    var(--ai-plasma),
+    var(--ai-cyan)
+  ) !important;
+  color: #fff !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 0 40px rgba(0, 245, 255, 0.6), 0 0 80px rgba(255, 0, 128, 0.4) !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Enhanced AI Color Palette */
+.ai-accent-1 {
+  color: var(--ai-cyan);
+}
+.ai-accent-2 {
+  color: var(--ai-electric);
+}
+.ai-accent-3 {
+  color: var(--ai-neon-green);
+}
+.ai-accent-4 {
+  color: var(--ai-plasma);
+}
+.ai-accent-5 {
+  color: var(--ai-quantum);
+}
+
+/* Ultra AI Gradient Backgrounds */
+.ai-bg-1 {
+  background: linear-gradient(135deg, var(--ai-cyan), var(--ai-quantum));
+}
+
+.ai-bg-2 {
+  background: linear-gradient(135deg, var(--ai-plasma), var(--ai-neural));
+}
+
+.ai-bg-3 {
+  background: linear-gradient(135deg, var(--ai-matrix), var(--ai-electric));
+}
+
+/* Pulsing AI Effect */
+@keyframes ai-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--ai-cyan), 0 0 40px var(--ai-plasma);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--ai-plasma), 0 0 80px var(--ai-cyan);
+  }
+}
+/*
+.ai-pulse {
+  animation: ai-pulse 2s ease-in-out infinite;
+} */
+
+/* Neural Network Lines */
+.neural-lines {
+  background-image: linear-gradient(45deg, var(--ai-cyan) 1px, transparent 1px),
+    linear-gradient(-45deg, var(--ai-plasma) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+/* Quantum Glow Text */
+.quantum-text {
+  background: linear-gradient(
+    45deg,
+    var(--ai-cyan),
+    var(--ai-plasma),
+    var(--ai-neon-green)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: quantum-shift 3s ease-in-out infinite;
+}
+
+@keyframes quantum-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* AI Border Animation */
+.ai-border {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--ai-void), var(--ai-void)) padding-box,
+    linear-gradient(
+        45deg,
+        var(--ai-cyan),
+        var(--ai-plasma),
+        var(--ai-neon-green)
+      )
+      border-box;
+  animation: ai-border-rotate 4s linear infinite;
+}
+
+@keyframes ai-border-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Holographic Button Effect */
+.holo-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 245, 255, 0.1),
+    rgba(255, 0, 128, 0.1),
+    rgba(57, 255, 20, 0.1)
+  );
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--ai-cyan),
+    transparent,
+    var(--ai-plasma),
+    transparent
+  );
+  animation: holo-rotate 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes holo-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply AI colors to existing elements */
+section h2.glitch-effect {
+  background: linear-gradient(45deg, var(--ai-cyan), var(--ai-plasma));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: quantum-shift 4s ease-in-out infinite;
+}
+
+.hero-section .hero h1 {
+  background: linear-gradient(
+    45deg,
+    var(--ai-cyan),
+    var(--ai-plasma),
+    var(--ai-neon-green)
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: quantum-shift 3s ease-in-out infinite;
+}
+
+/* Enhanced tech items with AI colors */
+.tech-item:hover {
+  border-color: var(--ai-cyan) !important;
+  box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3) !important;
+}
+
+.industry-item:hover {
+  border-color: var(--ai-plasma) !important;
+  box-shadow: 0 8px 25px rgba(255, 0, 128, 0.2) !important;
+}
+
+/* AI-enhanced buttons */
+.cta-button,
+.contact-button {
+  background: linear-gradient(
+    135deg,
+    var(--ai-cyan),
+    var(--ai-plasma)
+  ) !important;
+  box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3) !important;
+}
+
+.cta-button:hover,
+.contact-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--ai-plasma),
+    var(--ai-neon-green)
+  ) !important;
+  box-shadow: 0 8px 25px rgba(255, 0, 128, 0.4) !important;
+}
+/* Modern Project Gallery Styles */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: rgba(13, 17, 23, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(88, 166, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(88, 166, 255, 0.2);
+  border-color: var(--ai-cyan);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 245, 255, 0.1),
+    rgba(255, 0, 128, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, var(--ai-cyan), var(--ai-plasma));
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-info {
+  padding: 25px;
+}
+
+.project-info h3 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.project-info p {
+  color: #8b949e;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--ai-cyan), var(--ai-plasma));
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: linear-gradient(135deg, var(--ai-plasma), var(--ai-neon-green));
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+
+  .project-info h3 {
+    font-size: 20px;
+  }
+}
