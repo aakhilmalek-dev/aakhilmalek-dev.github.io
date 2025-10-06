@@ -145,14 +145,24 @@
   </header>
 
   <div class="hero-section">
+    <!-- Particle Effects -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
 
     <div class="container">
-
       <div class="row">
         <div class="col-lg-12">
-
           <div class="hero">
-            <h1>Hello, I'm Aakhil Malek</h1>
+            <h1 class="glitch-effect">Hello, I'm Aakhil Malek</h1>
             <p>I'm a passionate Frontend Developer from Ahmedabad, India, crafting clean, modern, and user-friendly
               web experiences.</p>
           </div>
@@ -186,7 +196,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <h2>About Me</h2>
+            <h2 class="glitch-effect">About Me</h2>
             <p>
               I’m a dedicated and professional web developer with 6 years of experience in crafting beautiful,
               functional,
@@ -239,7 +249,7 @@
 
     <section class="section" id="skills">
       <div class="container">
-        <h2>Skills</h2>
+        <h2 class="glitch-effect">Skills</h2>
         <p class="subtitle">
           A diverse toolkit to build dynamic web experiences
         </p>
@@ -263,7 +273,7 @@
           </div>
 
           <div class="tech-details">
-            <h2>Showcasing My Frontend Development Expertise</h2>
+            <h2 class="glitch-effect">Showcasing My Frontend Development Expertise</h2>
             <ul>
               <li>I am a skilled frontend developer with extensive experience in building user-friendly, responsive
                 interfaces.</li>
@@ -283,8 +293,9 @@
 
     <section class="industries-section section">
       <div class="container">
-        <h2>Industries I Specialize In</h2>
-        <p>I deliver tailored web development solutions across diverse industries to bring your vision to life.</p>
+        <h2 class="glitch-effect">Industries I Specialize In</h2>
+        <p class="subtitle">I deliver tailored web development solutions across diverse industries to bring your vision
+          to life.</p>
 
         <div class="row justify-content-center">
           <div class="row">
@@ -374,7 +385,7 @@
           </div>
         </div> -->
         <div class="experience-education-section">
-          <h2>Experience & Education</h2>
+          <h2 class="glitch-effect">Experience & Education</h2>
 
           <div class="timeline-new">
             <div class="timeline-item-new">
@@ -441,7 +452,7 @@
 
     <section class="project-section" id="projects">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 class="glitch-effect">Projects</h2>
         <p>Bringing Ideas to Life: A Showcase of My Work</p>
         <div class="project-content">
           <div class="tabs">
@@ -562,7 +573,7 @@
     <section id="review" class="skills">
       <div class="container">
         <div>
-          <h2>Testimonials</h2>
+          <h2 class="glitch-effect">Testimonials</h2>
           <p>What Clients Are Saying: Hear from Those Who’ve Experienced My Work</p>
         </div>
         <div class="owl-carousel">
@@ -648,7 +659,7 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Contact</h2>
+        <h2 class="glitch-effect">Contact</h2>
         <p>If you'd like to collaborate or just want to say hi, feel free to reach out!</p>
 
         <div class="contact-wrapper">
@@ -832,6 +843,94 @@
         }
       })
 
+    });
+
+    // Matrix rain effect
+    function createMatrixRain() {
+      const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const container = document.querySelector('.hero-section');
+
+      setInterval(() => {
+        const char = document.createElement('div');
+        char.className = 'matrix-char';
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        char.style.left = Math.random() * 100 + '%';
+        char.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        char.style.opacity = Math.random() * 0.7 + 0.3;
+
+        container.appendChild(char);
+
+        setTimeout(() => {
+          if (char.parentNode) {
+            char.parentNode.removeChild(char);
+          }
+        }, 5000);
+      }, 200);
+    }
+
+    // Terminal typing effect
+    function typeWriter(element, text, speed = 50) {
+      let i = 0;
+      element.innerHTML = '';
+
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    // Initialize effects
+    document.addEventListener('DOMContentLoaded', function () {
+      // Start matrix rain effect
+      createMatrixRain();
+
+      // Add interactive hover effects to cards
+      const cards = document.querySelectorAll('.tech-item, .industry-item, .testimonial, .timeline-item-new');
+      cards.forEach(card => {
+        card.classList.add('interactive-hover');
+      });
+
+      // Add terminal button class to existing buttons
+      const buttons = document.querySelectorAll('.contact-button, .cta-button');
+      buttons.forEach(btn => {
+        btn.classList.add('btn-terminal');
+      });
+
+      // Add neon border to important sections
+      const sections = document.querySelectorAll('.contact-wrapper, .testimonial');
+      sections.forEach(section => {
+        section.classList.add('neon-border');
+      });
+    });
+
+    // Smooth reveal animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.addEventListener('DOMContentLoaded', function () {
+      const animateElements = document.querySelectorAll('section, .tech-item, .industry-item, .timeline-item-new');
+      animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
     });
 
   </script>
