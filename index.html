@@ -122,9 +122,9 @@
           <nav class="navbar">
             <div class="logo">Aakhil M.</div>
 
-            <div class="menu-container">
+            <div class="menu-container ">
               <button class="nav-left-btn">◀</button>
-              <div class="nav-wrapper">
+              <div class="nav-wrapper ">
                 <ul class="nav-links">
                   <li><a href="#about">About</a></li>
                   <li><a href="#skills">Skills</a></li>
@@ -197,6 +197,16 @@
             <li class="tag">Usability Testing</li>
             <li class="tag">User Personas</li>
           </ul>
+
+          <div
+            class="resume-btn-container flex justify-content-center align-items-center text-center mt-5 position-relative"
+            style="z-index: 20;">
+            <a href="assets/Aakhil_Malek_2025.pdf" target="_blank" class="cta-button btn-terminal">
+              <span class="material-icons">download</span>
+              <span class="resume-btn-text">Resume</span>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
@@ -214,12 +224,7 @@
               and responsive websites. With a strong foundation in HTML, CSS, JavaScript, and React, I take pride in
               transforming ideas into dynamic, user-friendly digital experiences.
             </p>
-            <div class="resume-btn-container">
-              <a href="assets/Aakhil_Malek_2025.pdf" target="_blank" class="resume-btn">
-                <span class="material-icons">download</span>
-                <span class="resume-btn-text">Resume</span>
-              </a>
-            </div>
+
 
             <ul>
               <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
@@ -272,6 +277,13 @@
         </p>
         <div class="tech-section">
           <div class="tech-grid">
+            <div class="tech-item"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
+            <div class="tech-item"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg" alt="Sketch" />
+            </div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg"
+                alt="Adobe XD" /></div>
             <div class="tech-item"><img src="assets/image/icon/Html.svg" alt="HTML5" /></div>
             <div class="tech-item"><img src="assets/image/icon/Css3.svg" alt="CSS3" /></div>
             <div class="tech-item"><img src="assets/image/icon/scss.png" alt="scss" /></div>
@@ -292,14 +304,17 @@
           <div class="tech-details">
             <h2 class="glitch-effect">Showcasing My Frontend Development Expertise</h2>
             <ul>
-              <li>I am a skilled frontend developer with extensive experience in building user-friendly, responsive
-                interfaces.</li>
-              <li>Committed to writing secure and clean code, with a strong focus on data privacy and security
-                practices.</li>
-              <li>I guarantee complete ownership of the intellectual property (IP) of your project, with full NDA
-                protection to ensure confidentiality.</li>
-              <li>Offering a seamless onboarding process to get your project up and running quickly.</li>
-              <li>Fluent in working across different time zones and ensuring clear communication.</li>
+              <li>Expert in modern JavaScript frameworks (React, Angular, Vue) with 6+ years of hands-on experience
+              </li>
+              <li>Specialized in responsive web design, cross-browser compatibility, and mobile-first development</li>
+              <li>Proficient in CSS preprocessors (SCSS, SASS), CSS frameworks (Bootstrap, Tailwind), and CSS-in-JS
+                solutions</li>
+              <li>Advanced knowledge of frontend build tools (Webpack, Vite), version control (Git), and CI/CD
+                pipelines</li>
+              <li>Experience with design systems, component libraries, and maintaining consistent UI/UX standards</li>
+              <li>Strong focus on web performance optimization, accessibility (WCAG), and SEO best practices</li>
+              <li>Committed to writing secure, clean, and maintainable code with comprehensive testing strategies</li>
+              <li>Full NDA protection and complete IP ownership guarantee for all projects</li>
             </ul>
             <a href="#contact" class="cta-button">Contact</a>
           </div>
@@ -921,6 +936,8 @@
         margin: 10,
         smartSpeed: 450,
         autoplay: true,
+        nav: true,
+        navText: ['', ''],
         responsiveClass: true,
         responsive: {
           0: {
@@ -929,7 +946,7 @@
           },
           600: {
             items: 2,
-            nav: false
+            nav: true
           },
           1000: {
             items: 3,
